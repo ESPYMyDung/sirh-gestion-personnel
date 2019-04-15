@@ -36,13 +36,37 @@ public class EditerCollaborateurController extends HttpServlet
 		String nom = req.getParameter("nom");
 		String prenom = req.getParameter("prenom");
 		
-		if (matricule==null) // || titre==null || nom==null || prenom==null
+		/*
+		List<String> parametre = new ArrayList<>();
+		parametre.add(matricule); parametre.add(titre); 
+		parametre.add(nom); parametre.add(prenom);
+		
+		List<String> erreur = new ArrayList<>();
+		for (String elm:parametre)
+		{
+			if (elm==null || elm.isEmpty())
+				erreur.add(elm);
+		}
+		
+		if (! erreur.isEmpty() )
+		{
+			resp.sendError(400, "Les parametres suivant sont incorects : "
+					for (String elm:erreur)
+					{ + elm }
+					);
+		}*/
+		
+		/*cette partie peut etre automatise afin de pouvoir avoir un code evolutif : 
+		* en gros on met tout dans une liste et on teste sur chaque element de la liste
+		* avantage, si on est amene a ajouter un element plus tard, son test est automatise
+		*/
+		if (matricule==null || matricule.isEmpty()) // || titre==null || nom==null || prenom==null
 		{ resp.sendError(400, "Les parametres suivant sont incorects : matricule");}
-		else if (titre==null)
+		else if (titre==null || titre.isEmpty())
 		{ resp.sendError(400, "Les parametres suivant sont incorects : titre");}
-		else if (nom==null)
+		else if (nom==null || nom.isEmpty())
 		{ resp.sendError(400, "Les parametres suivant sont incorects : nom");}
-		else if (prenom==null)
+		else if (prenom==null || prenom.isEmpty())
 		{ resp.sendError(400, "Les parametres suivant sont incorects : prenom");}
 		else
 		{
