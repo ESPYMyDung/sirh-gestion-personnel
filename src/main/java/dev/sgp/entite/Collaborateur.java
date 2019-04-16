@@ -17,6 +17,29 @@ public class Collaborateur
 	private ZonedDateTime dateHeureCreation;
 	private boolean actif;
 	
+	public Collaborateur() {}
+	
+	public Collaborateur(String nom, String prenom, LocalDate dateNaissance, String Adresse, String numeroSS)
+	{
+		this.matricule = "ramdom";
+		this.nom = nom;
+		this.prenom = prenom;
+		this.dateNaissance = dateNaissance;
+		this.Adresse = Adresse;
+		this.numeroSS = numeroSS;
+		this.emailPro = prenom.toLowerCase()+ "." + nom.toLowerCase() + "@societe.com";
+		this.photo = "par défaut";
+		this.dateHeureCreation = ZonedDateTime.now();
+		this.actif = true;
+	}
+	
+	//methode
+	public String toString()
+	{
+		String out = this.nom.toUpperCase() + " " + this.prenom + ", Email : " + this.emailPro;
+		return out;
+	}
+	
 	//getter
 	public String getMatricule() {
 		return matricule;

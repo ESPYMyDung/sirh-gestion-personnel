@@ -22,20 +22,49 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
-	<title>Insert title here</title>
+	<title>Editer Collaborateur</title>
 </head>
 
 <body>
 	<h1>Nouveau Collaborateur</h1>
-	
-	<form method="POST" action="http://site.com/ajouter_client.php">
-				Nom	: <input type="text" name="nom" /> <br/>
-				Prénom : <input type="text" name="prenom" /> <br/>
-				Date de naissance : <input type="text" name="dateNaissance" /> <br/>
-				Adresse : <input type="text" name="Adresse" /> <br/>
-				Numero de securite sociale : <input type="text" name="numeroSS" /> <br/>
-				<input type="submit" classe="btn" value="Créer" />
-			</form>
+
+	<form class="needs-validation" method="post" novalidate>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="nom">Nom</label>
+			<input type="text" class="form-control" name="nom" required />
+			<div class="invalid-feedback">Le nom est obligatoire</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="prenom">Prenom</label>
+			<input type="text" class="form-control" name="prenom" required />
+			<div class="invalid-feedback">Le prenom est obligatoire</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label" for="DdN">Date de Naissance</label>
+			<input type="text" class="form-control" name="DdN" required />
+			<div class="invalid-feedback">La date de naissance est obligatoire</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-form-label" for="adresse">Adresse</label>
+			<input type="text" class="form-control" name="adresse" required />
+			<div class="invalid-feedback">L'adresse est obligatoire</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-form-label" for="SS">Numéro de Sécurité Sociale</label>
+			<input type="text" class="form-control" name="SS" required />
+			<div class="invalid-feedback">Le numéro de sécurité sociale est obligatoire</div>
+		</div>
+
+		<div class="text-right">
+			<input type="submit" classe="btn" data-toggle="modal" data-target="#creerModal" value="Créer" />
+		</div>
+
+	</form>
+
 
 </body>
 

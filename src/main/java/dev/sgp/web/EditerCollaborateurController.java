@@ -15,6 +15,7 @@ public class EditerCollaborateurController extends HttpServlet
 			throws ServletException, IOException
 	{
 
+		 /* Servlet
 		// recupere la valeur d'un parametre dont le nom est matricule
 		String matricule = req.getParameter("matricule");
 
@@ -25,7 +26,12 @@ public class EditerCollaborateurController extends HttpServlet
 		resp.getWriter().write("<h1>Edition de collaborateur</h1>"
 		+ "Matricule : " + matricule);
 		}
-
+		*/
+		
+		/* JSP*/
+		req.getRequestDispatcher("/WEB-INF/views/collab/editerCollaborateur.jsp")
+		.forward(req, resp);
+		
 	}
 	
 	protected void doPost (HttpServletRequest req, HttpServletResponse resp)
