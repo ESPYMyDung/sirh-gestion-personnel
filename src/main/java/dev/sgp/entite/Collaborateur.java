@@ -16,6 +16,8 @@ public class Collaborateur
 	private String photo;
 	private ZonedDateTime dateHeureCreation;
 	private boolean actif;
+	private String intitulePoste;
+	private Departement departement;
 	
 	public Collaborateur() {}
 	
@@ -81,6 +83,14 @@ public class Collaborateur
 		return actif;
 	}
 	
+	public String getIntitulePoste() {
+		return intitulePoste;
+	}
+	
+	public Departement getDepartement() {
+		return departement;
+	}
+	
 	//setter
 	public void setMatricule(String matricule) {
 		this.matricule = matricule;
@@ -120,6 +130,14 @@ public class Collaborateur
 
 	public void setActif(boolean actif) {
 		this.actif = actif;
+	}
+
+	public void setIntitulePoste(String intitulePoste) {
+		this.intitulePoste = intitulePoste;
+	}
+
+	public void setDepartement(Departement departement) {
+		this.departement = departement;
 	}
 	
 }
